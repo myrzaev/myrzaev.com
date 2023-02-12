@@ -1,25 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { StyledMainContainer } from "./gloabalStyle";
+import {
+  Header,
+  About,
+  Contact,
+  Experience,
+  Projects,
+  Tabs,
+} from "./components";
+import NYbackground from "./assets/NYC.webp";
+import "lazysizes/plugins/unveilhooks/ls.unveilhooks";
+
+interface IContentElements {
+  about: JSX.Element;
+  experience: JSX.Element;
+  contact: JSX.Element;
+  projects: JSX.Element;
+}
 
 function App() {
+  const [section, setSection] = useState("about");
+
+  const content: IContentElements = {
+    about: <About />,
+    experience: <Experience />,
+    contact: <Contact />,
+    projects: <Projects />,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledMainContainer className="animation lazyload" data-bg={NYbackground}>
+      <div className="card " data-state={`#${section}`}>
+        <Header section={section} />
+        <main className="card-main">
+          {(content as any)[section]}
+          <Tabs
+            tabs={["about", "experience", "projects", "contact"]}
+            section={section}
+            onChange={setSection}
+          />
+        </main>
+      </div>
+    </StyledMainContainer>
   );
 }
 
