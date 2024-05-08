@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const StyledCardSection = styled.div`
-  .card-timeline {
-    margin-top: 15px;
     position: relative;
 
     &:after {
@@ -12,13 +10,18 @@ export const StyledCardSection = styled.div`
         rgba(81, 106, 204, 1) 100%
       );
       content: "";
-      left: 5px;
+      left: 25px;
       width: 2px;
-      top: 0;
-      height: 100%;
+      top: 52px;
+      height: 85%;
       position: absolute;
-      content: "";
     }
+
+  .card-timeline {
+    margin-top: 15px;
+    position: relative;
+    overflow: auto;
+    height: 350px;
   }
 
   .card-item {

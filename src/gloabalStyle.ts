@@ -6,7 +6,8 @@ interface IStyledMainContainerProps {
 
 export const GlobalStyle = createGlobalStyle`
     * {
-        box-sizing: border-box;
+      box-sizing: border-box;
+      transition: .3 ease;
     }
   
     body {
@@ -27,13 +28,13 @@ export const GlobalStyle = createGlobalStyle`
         animation: fadeIn 0.6s both;
 
         @keyframes fadeIn {
-            0% {
+          0% {
             opacity: 0;
             transform: translatey(40px);
-            }
-            100% {
+          }
+          100% {
             opacity: 1;
-            }
+          }
         }
     }
 `;
@@ -45,10 +46,11 @@ export const StyledMainContainer = styled.div<IStyledMainContainerProps>`
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
+  box-sizing: border-box;
 
   .card {
     max-width: 340px;
@@ -82,6 +84,7 @@ export const StyledMainContainer = styled.div<IStyledMainContainerProps>`
 
   .card[data-state="#experience"] {
     height: 550px;
+    overflow: hidden;
   }
 
   .card-main {

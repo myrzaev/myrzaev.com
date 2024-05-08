@@ -30,7 +30,7 @@ function App() {
 
   return (
     <StyledMainContainer className="animation lazyload" data-bg={NYbackground}>
-      <div className="card " data-state={`#${section}`}>
+      <div className="card" data-state={`#${section}`}>
         <Header section={section} />
         <main className="card-main">
           {(content as any)[section]}

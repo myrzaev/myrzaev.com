@@ -58,7 +58,7 @@ export const StyledHeaderComponent = styled.header`
     background-position: center;
     filter: blur(30px);
     transform: scale(1.2);
-    transition: 0.5s;
+    transition: filter 0.2s ease; /* Simplified transition */
   }
 
   .card-avatar {
@@ -72,6 +72,7 @@ export const StyledHeaderComponent = styled.header`
     bottom: 0;
     left: 50%;
     transform: translateX(-50%) translateY(-64px);
+    transition: left 0.2s ease, width 0.2s ease, height 0.2s ease; /* Added transitions */
   }
 
   .card-fullname {
@@ -82,6 +83,7 @@ export const StyledHeaderComponent = styled.header`
     text-align: center;
     white-space: nowrap;
     transform: translateY(-10px) translateX(-50%);
+    transition: font-size 0.2s ease; /* Added transition */
     left: 50%;
   }
 
@@ -97,5 +99,6 @@ export const StyledHeaderComponent = styled.header`
     margin: 0;
     left: 50%;
     transform: translateX(-50%) translateY(-7px);
+    transition: font-size 0.2s ease, letter-spacing 0.2s ease; /* Added transitions */
   }
 `;

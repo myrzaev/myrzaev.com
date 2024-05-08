@@ -6,11 +6,8 @@ function About() {
       <div className="card-content">
         <h1 className="card-subtitle">ABOUT</h1>
         <p className="card-desc">
-          I'm a Frontend Engineer with 4+ years of experience creating web
-          applications and specialized in JS and React and also 3+ years of
-          backend expertise in building services. I've worked in two huge
-          companies EPAM Systems and VEON Ltd.. <br />
-          And now I'm looking for a job.
+          Green Card Holder — I am authorized to work in the United States. <br />
+          Highly skilled and motivated Full-Stack Engineer with 5+ years of hands-on experience building various web applications for international companies in USA, Amsterdam and Denmark
         </p>
       </div>
     </StyledCardSection>

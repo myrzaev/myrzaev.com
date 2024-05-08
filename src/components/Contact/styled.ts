@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const StyledContactSection = styled.div`
-  transition: 0.3s;
-
   .card-contact-wrapper {
     margin-top: 20px;
   }

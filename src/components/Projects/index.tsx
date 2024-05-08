@@ -316,7 +316,7 @@ function Projects() {
   };
 
   return (
-    <StyledProjectsSection className="animation unselect">
+    <StyledProjectsSection className="animation" id="projects">
       <div className="projects-title">
         <h1 className="card-subtitle">PROJECTS</h1>
 
